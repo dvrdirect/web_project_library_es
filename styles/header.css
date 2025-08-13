@@ -1,0 +1,119 @@
+@media (max-width: 1168px) {
+  .header__content {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 0 16px;
+    padding: 0 16px;
+  }
+  .header__title {
+    font-size: 40px;
+    line-height: 48px;
+    margin: 48px 0 0 0;
+    max-width: 100%;
+  }
+  .header__description {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 24px 0 0 0;
+    max-width: 100%;
+  }
+  .header__image {
+    max-width: 420px;
+    width: 100%;
+    margin: 24px auto 0 auto;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    padding: 12px 2vw 64px 2vw;
+    min-height: 320px;
+  }
+  .header__title {
+    font-size: 28px;
+    line-height: 34px;
+    margin: 24px 0 0 0;
+  }
+  .header__description {
+    font-size: 14px;
+    line-height: 20px;
+    margin: 16px 0 32px 0;
+  }
+  .header__image {
+    max-width: 96vw;
+    margin: 12px auto 48px auto;
+    padding: 12px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: block;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "header__image header__title"
+      "header__image header__description";
+    background: #fff;
+  }
+}
+/* Header styles (BEM) */
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 720px;
+  max-height: 800px;
+  padding: 30px 80px 40px;
+  position: relative;
+  box-sizing: border-box;
+  background: #fff;
+  z-index: 10;
+}
+
+.header__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "header__title header__image"
+    "header__description header__image";
+  align-items: center;
+  gap: 0 32px;
+}
+
+.header__title {
+  grid-area: header__title;
+  font-size: 62px;
+  line-height: 76px;
+  font-weight: 500;
+  max-width: 635px;
+  margin: 128px 0 0 0;
+}
+
+.header__description {
+  grid-area: header__description;
+  max-width: 515px;
+  font-size: 20px;
+  line-height: 30px;
+  margin: 32px 0 0 0;
+}
+
+.header__image {
+  grid-area: header__image;
+  max-width: 636px;
+}
+
+.header__footer {
+  margin-top: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 16px auto 40px auto;
+}
+
+.header__link {
+  color: #2f80ed;
+  text-decoration: none;
+}
+
+.header__address {
+  margin: 0;
+  color: #838383;
+}
